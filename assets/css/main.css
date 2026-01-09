@@ -71,7 +71,7 @@ body {
 }
 
 .hero-grid {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 460px 1fr;
@@ -243,7 +243,7 @@ body {
 /* each entry: left | divider | right */
 .cv-entry {
   display: grid;
-  grid-template-columns: minmax(240px, 32%) 1px 1fr;
+  grid-template-columns: minmax(280px, 35%) 1px 1fr;
   gap: 18px;
   align-items: start;
   padding: 10px 0;
@@ -337,4 +337,8 @@ body {
   .cv-left {
     grid-template-columns: 44px 1fr;
   }
+}
+.cv-page .hero-grid {
+  grid-template-columns: 380px 1fr;
+  gap: 50px;
 }
