@@ -1,0 +1,32 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+nav {
+  margin-bottom: 32px;
+}
+
+nav a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+footer {
+  margin-top: 64px;
+  font-size: 0.9em;
+  color: #666;
+}
