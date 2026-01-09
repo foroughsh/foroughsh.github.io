@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV – Forough Shahabsamani</title>
+  <title>cv – forough shahabsamani</title>
 
   <link rel="stylesheet" href="/assets/css/main.css" />
   <script defer src="/assets/js/main.js"></script>
@@ -13,12 +13,7 @@
   <!-- top bar -->
   <header class="topbar">
     <div class="brand">
-      <img
-        class="avatar"
-        src="/assets/images/profile-alt-tp-sq.png"
-        alt="forough profile icon"
-      />
-
+      <img class="avatar" src="/assets/images/smallicon.jpg" alt="forough profile icon" />
       <div class="brand-text">
         <div class="name">Forough Shahabsamani</div>
         <div class="role">Data Scientist</div>
@@ -36,59 +31,131 @@
     </nav>
   </header>
 
-  <!-- main content (same layout as home page) -->
   <main class="hero">
     <section class="hero-grid">
+      <!-- left: static photo -->
+      <div class="photo-wrap">
+        <img class="photo" src="/assets/images/profile.jpg" alt="photo of forough" loading="eager" />
+      </div>
 
-      <!-- right: CV content -->
+      <!-- right: cv content -->
       <div class="hero-text">
-        <h1 class="hello" style="font-size: 64px;">cv</h1>
+        <h1 class="hello cv-title">cv</h1>
 
-        <p class="bio" style="margin-bottom: 18px;">
+        <p class="bio cv-intro">
           data scientist · machine learning engineer · applied ml
         </p>
 
-        <!-- optional: add a pdf later -->
-        <!-- put pdf at: assets/pdf/forough-shahabsamani-cv.pdf -->
-        <p class="bio" style="margin-bottom: 28px;">
-          <a class="nav-link" href="/assets/pdf/forough-shahabsamani-cv.pdf">download pdf</a>
-        </p>
+        <!-- experience -->
+        <h2 class="subhead cv-section-title">experience</h2>
 
-        <h2 class="subhead">experience</h2>
+        <!-- entry 1 -->
+        <article class="cv-entry">
+          <div class="cv-left">
+            <img class="cv-logo" src="/assets/images/company-1-logo.png" alt="company 1 logo" />
+            <div class="cv-left-text">
+              <div class="cv-org">company name</div>
+              <div class="cv-dates">2024 - present</div>
+            </div>
+          </div>
 
-        <div style="margin-bottom: 22px;">
-          <p style="margin: 0; font-weight: 750;">data scientist – company name</p>
-          <p style="margin: 4px 0; color: #666;">city · 2024 – present</p>
-          <ul style="margin: 10px 0 0; color: #444; line-height: 1.7;">
-            <li>built and improved recommendation models to increase conversion and revenue.</li>
-            <li>developed data pipelines and monitoring for production ml systems.</li>
-            <li>collaborated with product and engineering to deploy and iterate quickly.</li>
-          </ul>
-        </div>
+          <div class="cv-divider" aria-hidden="true"></div>
 
-        <div style="margin-bottom: 22px;">
-          <p style="margin: 0; font-weight: 750;">machine learning researcher – lab / university</p>
-          <p style="margin: 4px 0; color: #666;">city · 2019 – 2024</p>
-          <ul style="margin: 10px 0 0; color: #444; line-height: 1.7;">
-            <li>researched representation learning and model evaluation for real-world datasets.</li>
-            <li>published work and presented results to academic and industry audiences.</li>
-          </ul>
-        </div>
+          <div class="cv-right">
+            <div class="cv-role">data scientist</div>
+            <p class="cv-desc">
+              short 1-2 line summary of what you do and your focus area.
+            </p>
+            <ul class="cv-bullets">
+              <li>impact statement with result (e.g., improved conversion by x%).</li>
+              <li>built / deployed models (recommenders, forecasting, ranking, etc.).</li>
+              <li>created monitoring, data quality checks, and dashboards.</li>
+            </ul>
+          </div>
+        </article>
 
-        <h2 class="subhead" style="margin-top: 26px;">education</h2>
+        <hr class="cv-entry-sep" />
 
-        <div style="margin-bottom: 22px;">
-          <p style="margin: 0; font-weight: 750;">phd, computer science – university name</p>
-          <p style="margin: 4px 0; color: #666;">2019 – 2024</p>
-          <p style="margin: 10px 0 0; color: #444; line-height: 1.7;">
-            focus: machine learning, data mining, recommendation, graph learning.
-          </p>
-        </div>
+        <!-- entry 2 -->
+        <article class="cv-entry">
+          <div class="cv-left">
+            <img class="cv-logo" src="/assets/images/company-2-logo.png" alt="company 2 logo" />
+            <div class="cv-left-text">
+              <div class="cv-org">university / lab</div>
+              <div class="cv-dates">2019 - 2024</div>
+            </div>
+          </div>
 
-        <div style="margin-bottom: 8px;">
-          <p style="margin: 0; font-weight: 750;">msc / bsc – university name</p>
-          <p style="margin: 4px 0; color: #666;">year – year</p>
-        </div>
+          <div class="cv-divider" aria-hidden="true"></div>
+
+          <div class="cv-right">
+            <div class="cv-role">machine learning researcher</div>
+            <p class="cv-desc">
+              one line about your research area and what you worked on.
+            </p>
+            <ul class="cv-bullets">
+              <li>research on representation learning / gnn / recommendation.</li>
+              <li>designed experiments and evaluation pipelines.</li>
+              <li>published and presented results.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- thick separator between sections -->
+        <hr class="cv-section-sep" />
+
+        <!-- education -->
+        <h2 class="subhead cv-section-title">education</h2>
+
+        <!-- education entry 1 -->
+        <article class="cv-entry">
+          <div class="cv-left">
+            <img class="cv-logo" src="/assets/images/university-1-logo.png" alt="university logo" />
+            <div class="cv-left-text">
+              <div class="cv-org">university name</div>
+              <div class="cv-dates">2019 - 2024</div>
+            </div>
+          </div>
+
+          <div class="cv-divider" aria-hidden="true"></div>
+
+          <div class="cv-right">
+            <div class="cv-role">phd, computer science</div>
+            <p class="cv-desc">
+              focus: machine learning, recommender systems, graph learning.
+            </p>
+            <ul class="cv-bullets">
+              <li>thesis topic: (add your thesis title or theme).</li>
+              <li>selected coursework: (optional).</li>
+              <li>awards / scholarships: (optional).</li>
+            </ul>
+          </div>
+        </article>
+
+        <hr class="cv-entry-sep" />
+
+        <!-- education entry 2 -->
+        <article class="cv-entry">
+          <div class="cv-left">
+            <img class="cv-logo" src="/assets/images/university-2-logo.png" alt="university logo" />
+            <div class="cv-left-text">
+              <div class="cv-org">university name</div>
+              <div class="cv-dates">year - year</div>
+            </div>
+          </div>
+
+          <div class="cv-divider" aria-hidden="true"></div>
+
+          <div class="cv-right">
+            <div class="cv-role">msc / bsc, field</div>
+            <p class="cv-desc">
+              optional: 1 line about your focus or key projects.
+            </p>
+            <ul class="cv-bullets">
+              <li>optional bullet.</li>
+            </ul>
+          </div>
+        </article>
 
       </div>
     </section>

@@ -225,3 +225,116 @@ body {
     height: 132px;
   }
 }
+/* ---------------- cv layout helpers ---------------- */
+
+.cv-title {
+  font-size: 64px;
+}
+
+.cv-intro {
+  margin-bottom: 22px;
+}
+
+.cv-section-title {
+  margin-top: 22px;
+  margin-bottom: 14px;
+}
+
+/* each entry: left | divider | right */
+.cv-entry {
+  display: grid;
+  grid-template-columns: 220px 1px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 10px 0;
+}
+
+.cv-left {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.cv-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+.cv-org {
+  font-weight: 750;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.cv-dates {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #666;
+}
+
+.cv-divider {
+  width: 1px;
+  height: 100%;
+  background: rgba(0,0,0,0.14);
+}
+
+.cv-right .cv-role {
+  font-weight: 750;
+  margin-bottom: 6px;
+}
+
+.cv-desc {
+  margin: 0 0 10px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.cv-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.cv-bullets li {
+  margin: 6px 0;
+}
+
+/* thin separator between entries */
+.cv-entry-sep {
+  border: none;
+  height: 1px;
+  background: rgba(0,0,0,0.10);
+  margin: 14px 0;
+}
+
+/* thicker separator between experience and education */
+.cv-section-sep {
+  border: none;
+  height: 3px;
+  background: rgba(0,0,0,0.18);
+  margin: 26px 0;
+  border-radius: 999px;
+}
+
+/* responsive: stack left/right on small screens */
+@media (max-width: 1020px) {
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .cv-divider {
+    display: none;
+  }
+
+  .cv-left {
+    grid-template-columns: 44px 1fr;
+  }
+}
