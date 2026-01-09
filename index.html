@@ -1,40 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Forough Shahabsamani</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script defer src="/assets/js/main.js"></script>
 </head>
+
 <body>
+  <!-- top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <div class="brand-text">
+        <div class="name">forough shahabsamani</div>
+        <div class="role">machine learning engineer</div>
+      </div>
+    </div>
 
-<nav>
-  <a href="/">home</a>
-  <a href="/about/">about</a>
-  <a href="/projects/">projects</a>
-  <a href="/publications/">publications</a>
-  <a href="/cv/">cv</a>
-  <a href="/contact/">contact</a>
-</nav>
+    <nav class="nav">
+      <a href="/cv/" class="nav-link">resume</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="/projects/" class="nav-link">projects</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="/contact/" class="nav-link">contact</a>
+    </nav>
+  </header>
 
-<main>
-  <h1>Forough Shahabsamani</h1>
-  <p>
-    machine learning engineer · researcher · data scientist
-  </p>
+  <!-- hero -->
+  <main class="hero">
+    <section class="hero-grid">
+      <!-- left: photo -->
+      <div class="photo-wrap">
+        <!-- put your image here: assets/images/profile.jpg -->
+        <img
+          class="photo"
+          src="/assets/images/profile.jpg"
+          alt="photo of forough"
+          loading="eager"
+        />
+      </div>
 
-  <section>
-    <h2>welcome</h2>
-    <p>
-      this is my personal website where i share my work, projects,
-      and research interests in machine learning and data-driven systems.
-    </p>
-  </section>
-</main>
+      <!-- right: text -->
+      <div class="hero-text">
+        <h1 class="hello">hello</h1>
 
-<footer>
-  <p>© forough shahabsamani</p>
-</footer>
+        <h2 class="subhead">a bit about me</h2>
 
+        <p class="bio">
+          i work on applied machine learning, recommender systems, and data-driven products.
+          i enjoy building practical systems end-to-end: from data pipelines and modeling to monitoring and deployment.
+        </p>
+
+        <div class="cta-row">
+          <a class="cta cta-yellow" href="/cv/">
+            <span>resume</span>
+          </a>
+          <a class="cta cta-red" href="/projects/">
+            <span>projects</span>
+          </a>
+          <a class="cta cta-cyan" href="/contact/">
+            <span>contact</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> forough shahabsamani</div>
+  </footer>
 </body>
 </html>
