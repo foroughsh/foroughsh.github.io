@@ -13,7 +13,13 @@
   <!-- top bar -->
   <header class="topbar">
     <div class="brand">
-      <span class="dot" aria-hidden="true"></span>
+      <!-- static small icon (no hover effect) -->
+      <img
+        class="avatar"
+        src="/assets/images/smallicon.jpg"
+        alt="forough profile icon"
+      />
+
       <div class="brand-text">
         <div class="name">Forough Shahabsamani</div>
         <div class="role">Data Scientist</div>
@@ -22,9 +28,9 @@
 
     <nav class="nav">
       <a href="/cv/" class="nav-link">resume</a>
-      <span class="sep" aria-hidden="true">|</span>
+      <span class="sep">|</span>
       <a href="/projects/" class="nav-link">projects</a>
-      <span class="sep" aria-hidden="true">|</span>
+      <span class="sep">|</span>
       <a href="/contact/" class="nav-link">contact</a>
     </nav>
   </header>
@@ -32,15 +38,23 @@
   <!-- hero -->
   <main class="hero">
     <section class="hero-grid">
-      <!-- left: photo -->
+
+      <!-- left: FLIPPING profile photo -->
       <div class="photo-wrap">
-        <!-- put your image here: assets/images/profile.jpg -->
-        <img
-          class="photo"
-          src="/assets/images/profile.jpg"
-          alt="photo of forough"
-          loading="eager"
-        />
+        <div class="photo-flip">
+          <div class="photo-inner">
+            <img
+              class="photo-face photo-front"
+              src="/assets/images/profile.jpg"
+              alt="photo of forough"
+            />
+            <img
+              class="photo-face photo-back"
+              src="/assets/images/profile-alt-tp.png"
+              alt="alternate photo of forough"
+            />
+          </div>
+        </div>
       </div>
 
       <!-- right: text -->
@@ -51,15 +65,17 @@
 
         <p class="bio">
           I work on applied machine learning, recommender systems, and data-driven products.
-          I enjoy building practical systems end-to-end: from data pipelines and modeling to monitoring and deployment.
+          I enjoy building practical systems end-to-end: from data pipelines and modeling
+          to monitoring and deployment.
         </p>
 
         <div class="cta-row">
-          <a class="cta cta-yellow" href="/cv/"><span>resume</span></a>
-          <a class="cta cta-green" href="/projects/"><span>projects</span></a>
-          <a class="cta cta-lightblue" href="/contact/"><span>contact</span></a>
+          <a class="cta cta-yellow" href="/cv/">resume</a>
+          <a class="cta cta-green" href="/projects/">projects</a>
+          <a class="cta cta-lightblue" href="/contact/">contact</a>
         </div>
       </div>
+
     </section>
   </main>
 
