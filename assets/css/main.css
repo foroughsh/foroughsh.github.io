@@ -64,12 +64,13 @@ body {
   color: #bbb;
 }
 
-/* ---------------- HERO ---------------- */
+/* ---------------- HERO (shared) ---------------- */
 
 .hero {
   padding: 40px;
 }
 
+/* homepage grid (2 columns: photo + text) */
 .hero-grid {
   max-width: 1600px;
   margin: 0 auto;
@@ -79,7 +80,7 @@ body {
   align-items: center;
 }
 
-/* -------- FLIPPING PROFILE PHOTO -------- */
+/* -------- FLIPPING PROFILE PHOTO (homepage) -------- */
 
 .photo-wrap {
   display: flex;
@@ -149,7 +150,7 @@ body {
   line-height: 1.7;
 }
 
-/* ---------------- BUTTONS ---------------- */
+/* ---------------- BUTTONS (homepage) ---------------- */
 
 .cta-row {
   display: flex;
@@ -188,7 +189,7 @@ body {
   text-align: center;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* ---------------- RESPONSIVE (homepage) ---------------- */
 
 @media (max-width: 1020px) {
   .hero-grid {
@@ -225,6 +226,21 @@ body {
     height: 132px;
   }
 }
+
+/* ---------------- CV PAGE OVERRIDES ---------------- */
+
+/* CV page should NOT have a photo column */
+.cv-page .hero-grid {
+  grid-template-columns: 1fr;   /* single column */
+  gap: 0;
+  align-items: start;
+}
+
+/* allow CV content to use the full container width */
+.cv-page .hero-text {
+  max-width: 100%;
+}
+
 /* ---------------- cv layout helpers ---------------- */
 
 .cv-title {
@@ -337,8 +353,4 @@ body {
   .cv-left {
     grid-template-columns: 44px 1fr;
   }
-}
-.cv-page .hero-grid {
-  grid-template-columns: 380px 1fr;
-  gap: 50px;
 }
