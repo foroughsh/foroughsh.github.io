@@ -267,7 +267,7 @@ body {
 
 .cv-left {
   display: grid;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: 33px 1fr;
   gap: 12px;
   align-items: center;
 }
