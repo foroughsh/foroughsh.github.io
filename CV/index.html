@@ -36,171 +36,192 @@
   <main class="hero">
     <section class="hero-grid">
       <div class="hero-text">
-        <!--<h1 class="hello cv-title">cv</h1>
 
-        <p class="bio cv-intro">
-          data scientist · machine learning engineer · applied ml
-        </p>
-
-        <!-- experience -->
         <h2 class="subhead cv-section-title">experience</h2>
 
-        <!-- entry 1 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/sas-logo.png" alt="company 1 logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">company name</div>
-              <div class="cv-dates">2024 - present</div>
+        <!-- experience accordion (single-open) -->
+        <div class="cv-accordion" data-accordion="single">
+
+          <!-- item 1 (default open) -->
+          <section class="cv-acc-item is-open">
+            <button class="cv-acc-trigger" type="button" aria-expanded="true">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/sas-logo.png" alt="sas logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">company name</div>
+                  <div class="cv-dates">2024 - present</div>
+                </div>
+              </div>
+
+              <div class="cv-acc-right">
+                <div class="cv-role">data scientist</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
+
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                short 1-2 line summary of what you do and your focus area.
+              </p>
+              <ul class="cv-bullets">
+                <li>impact statement with result (e.g., improved conversion by x%).</li>
+                <li>built / deployed models (recommenders, forecasting, ranking, etc.).</li>
+                <li>created monitoring, data quality checks, and dashboards.</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
+          <!-- item 2 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/kth-logo.png" alt="kth logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">university / lab</div>
+                  <div class="cv-dates">2019 - 2024</div>
+                </div>
+              </div>
 
-          <div class="cv-right">
-            <div class="cv-role">data scientist</div>
-            <p class="cv-desc">
-              short 1-2 line summary of what you do and your focus area.
-            </p>
-            <ul class="cv-bullets">
-              <li>impact statement with result (e.g., improved conversion by x%).</li>
-              <li>built / deployed models (recommenders, forecasting, ranking, etc.).</li>
-              <li>created monitoring, data quality checks, and dashboards.</li>
-            </ul>
-          </div>
-        </article>
+              <div class="cv-acc-right">
+                <div class="cv-role">machine learning researcher</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
 
-        <hr class="cv-entry-sep" />
-
-        <!-- entry 2 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/kth-logo.png" alt="company 2 logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">university / lab</div>
-              <div class="cv-dates">2019 - 2024</div>
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                one line about your research area and what you worked on.
+              </p>
+              <ul class="cv-bullets">
+                <li>research on representation learning / gnn / recommendation.</li>
+                <li>designed experiments and evaluation pipelines.</li>
+                <li>published and presented results.</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
+          <!-- item 3 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/isc-logo.jpeg" alt="isc logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">university / lab</div>
+                  <div class="cv-dates">2019 - 2024</div>
+                </div>
+              </div>
 
-          <div class="cv-right">
-            <div class="cv-role">machine learning researcher</div>
-            <p class="cv-desc">
-              one line about your research area and what you worked on.
-            </p>
-            <ul class="cv-bullets">
-              <li>research on representation learning / gnn / recommendation.</li>
-              <li>designed experiments and evaluation pipelines.</li>
-              <li>published and presented results.</li>
-            </ul>
-          </div>
-        </article>
-        <hr class="cv-entry-sep" />
-        <!-- entry 3 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/isc-logo.jpeg" alt="company 2 logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">university / lab</div>
-              <div class="cv-dates">2019 - 2024</div>
+              <div class="cv-acc-right">
+                <div class="cv-role">machine learning researcher</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
+
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                one line about your research area and what you worked on.
+              </p>
+              <ul class="cv-bullets">
+                <li>research on representation learning / gnn / recommendation.</li>
+                <li>designed experiments and evaluation pipelines.</li>
+                <li>published and presented results.</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
-
-          <div class="cv-right">
-            <div class="cv-role">machine learning researcher</div>
-            <p class="cv-desc">
-              one line about your research area and what you worked on.
-            </p>
-            <ul class="cv-bullets">
-              <li>research on representation learning / gnn / recommendation.</li>
-              <li>designed experiments and evaluation pipelines.</li>
-              <li>published and presented results.</li>
-            </ul>
-          </div>
-        </article>
+        </div>
 
         <hr class="cv-section-sep" />
 
-        <!-- education -->
         <h2 class="subhead cv-section-title">education</h2>
 
-        <!-- education entry 1 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/kth-logo.png" alt="university logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">university name</div>
-              <div class="cv-dates">2019 - 2024</div>
+        <!-- education accordion (single-open) -->
+        <div class="cv-accordion" data-accordion="single">
+
+          <!-- education item 1 (default open) -->
+          <section class="cv-acc-item is-open">
+            <button class="cv-acc-trigger" type="button" aria-expanded="true">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/kth-logo.png" alt="kth logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">university name</div>
+                  <div class="cv-dates">2019 - 2024</div>
+                </div>
+              </div>
+
+              <div class="cv-acc-right">
+                <div class="cv-role">phd, computer science</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
+
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                focus: machine learning, recommender systems, graph learning.
+              </p>
+              <ul class="cv-bullets">
+                <li>thesis topic: (add your thesis title or theme).</li>
+                <li>selected coursework: (optional).</li>
+                <li>awards / scholarships: (optional).</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
+          <!-- education item 2 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/sharif-logo.jpeg" alt="sharif logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">university name</div>
+                  <div class="cv-dates">year - year</div>
+                </div>
+              </div>
 
-          <div class="cv-right">
-            <div class="cv-role">phd, computer science</div>
-            <p class="cv-desc">
-              focus: machine learning, recommender systems, graph learning.
-            </p>
-            <ul class="cv-bullets">
-              <li>thesis topic: (add your thesis title or theme).</li>
-              <li>selected coursework: (optional).</li>
-              <li>awards / scholarships: (optional).</li>
-            </ul>
-          </div>
-        </article>
+              <div class="cv-acc-right">
+                <div class="cv-role">msc / bsc, field</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
 
-        <hr class="cv-entry-sep" />
-
-        <!-- education entry 2 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/sharif-logo.jpeg" alt="university logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">university name</div>
-              <div class="cv-dates">year - year</div>
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                optional: 1 line about your focus or key projects.
+              </p>
+              <ul class="cv-bullets">
+                <li>optional bullet.</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
+          <!-- education item 3 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
+              <div class="cv-left">
+                <img class="cv-logo" src="/assets/images/isfahan-uni-logo.png" alt="isfahan university logo" />
+                <div class="cv-left-text">
+                  <div class="cv-org">university name</div>
+                  <div class="cv-dates">year - year</div>
+                </div>
+              </div>
 
-          <div class="cv-right">
-            <div class="cv-role">msc / bsc, field</div>
-            <p class="cv-desc">
-              optional: 1 line about your focus or key projects.
-            </p>
-            <ul class="cv-bullets">
-              <li>optional bullet.</li>
-            </ul>
-          </div>
-        </article>
+              <div class="cv-acc-right">
+                <div class="cv-role">msc / bsc, field</div>
+                <span class="cv-acc-chev">▾</span>
+              </div>
+            </button>
 
-        <hr class="cv-entry-sep" />
-
-        <!-- education entry 3 -->
-        <article class="cv-entry">
-          <div class="cv-left">
-            <img class="cv-logo" src="/assets/images/isfahan-uni-logo.png" alt="university logo" />
-            <div class="cv-left-text">
-              <div class="cv-org">university name</div>
-              <div class="cv-dates">year - year</div>
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                optional: 1 line about your focus or key projects.
+              </p>
+              <ul class="cv-bullets">
+                <li>optional bullet.</li>
+              </ul>
             </div>
-          </div>
+          </section>
 
-          <!-- <div class="cv-divider" aria-hidden="true"></div> -->
-
-          <div class="cv-right">
-            <div class="cv-role">msc / bsc, field</div>
-            <p class="cv-desc">
-              optional: 1 line about your focus or key projects.
-            </p>
-            <ul class="cv-bullets">
-              <li>optional bullet.</li>
-            </ul>
-          </div>
-        </article>
+        </div>
 
       </div>
     </section>
