@@ -4,16 +4,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (el) el.textContent = String(new Date().getFullYear());
 
   // single-open accordions (independent per section)
+  // default behavior: open first item unless data-default-open="none"
   document.querySelectorAll(".cv-accordion[data-accordion='single']").forEach((acc) => {
     const items = Array.from(acc.querySelectorAll(".cv-acc-item"));
+    const defaultOpenMode = acc.getAttribute("data-default-open"); // "none" or null
 
-    // default open: first item in this accordion (unless one is already marked is-open)
+    // decide which item should be open initially
     let openItem = items.find((i) => i.classList.contains("is-open"));
-    if (!openItem && items.length) openItem = items[0];
 
+    if (!openItem && items.length && defaultOpenMode !== "none") {
+      openItem = items[0];
+    }
+
+    // apply initial state
     items.forEach((item) => {
       const btn = item.querySelector(".cv-acc-trigger");
-      const isOpen = item === openItem;
+      const isOpen = openItem ? item === openItem : false;
       item.classList.toggle("is-open", isOpen);
       if (btn) btn.setAttribute("aria-expanded", String(isOpen));
     });

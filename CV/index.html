@@ -39,7 +39,7 @@
 
         <h2 class="subhead cv-section-title">experience</h2>
 
-        <!-- experience accordion (single-open) -->
+        <!-- experience accordion (single-open, first item open by default) -->
         <div class="cv-accordion" data-accordion="single">
 
           <!-- item 1 (default open) -->
@@ -131,16 +131,16 @@
 
         </div>
 
-        <hr class="cv-section-sep" />
+        <!-- <hr class="cv-section-sep" /> -->
 
         <h2 class="subhead cv-section-title">education</h2>
 
-        <!-- education accordion (single-open) -->
-        <div class="cv-accordion" data-accordion="single">
+        <!-- education accordion (single-open, all collapsed by default) -->
+        <div class="cv-accordion" data-accordion="single" data-default-open="none">
 
-          <!-- education item 1 (default open) -->
-          <section class="cv-acc-item is-open">
-            <button class="cv-acc-trigger" type="button" aria-expanded="true">
+          <!-- education item 1 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
               <div class="cv-left">
                 <img class="cv-logo" src="/assets/images/kth-logo.png" alt="kth logo" />
                 <div class="cv-left-text">
