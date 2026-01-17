@@ -259,7 +259,7 @@ body {
 /* each entry: left | divider | right */
 .cv-entry {
   display: grid;
-  grid-template-columns: minmax(240px, 30%) 1fr;
+  grid-template-columns: minmax(200px, 22%) 1fr;
   gap: 18px;
   align-items: start;
   padding: 10px 0;
