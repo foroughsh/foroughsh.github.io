@@ -1,0 +1,38 @@
+#leaf-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+  display: none; /* hidden until click */
+}
+
+.leaf {
+  position: absolute;
+  top: -12vh;
+  width: var(--size, 28px);
+  height: var(--size, 28px);
+  opacity: 0.95;
+  transform: translate3d(var(--x, 50vw), -10vh, 0) rotate(0deg);
+  animation:
+    leaf-fall var(--dur, 4.8s) linear forwards,
+    leaf-sway var(--sway, 1.6s) ease-in-out infinite;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.12));
+}
+
+@keyframes leaf-fall {
+  to {
+    transform: translate3d(calc(var(--x, 50vw) + var(--drift, 0px)), 115vh, 0)
+      rotate(var(--rot, 540deg));
+    opacity: 0.0;
+  }
+}
+
+@keyframes leaf-sway {
+  0%, 100% { margin-left: -10px; }
+  50%      { margin-left:  10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #leaf-overlay { display: none !important; }
+}
