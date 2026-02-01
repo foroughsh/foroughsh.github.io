@@ -435,3 +435,32 @@ body {
   opacity: 1;
   background: #222;
 }
+
+.cv-two-col {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr; /* left wider than right */
+  gap: 22px;
+  margin-top: 10px;
+  align-items: start;
+}
+
+.cv-mini-title {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* let the skills list fit nicely in the right column */
+.cv-col-right .skills {
+  max-width: 100%;
+}
+
+/* responsive: stack columns on small screens */
+@media (max-width: 820px) {
+  .cv-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
