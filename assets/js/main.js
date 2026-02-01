@@ -47,4 +47,25 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // -------- skills: dot plot renderer (4/5 etc.) --------
+  document.querySelectorAll(".skills .skill").forEach((li) => {
+    // prevent duplicates if script runs twice for any reason
+    if (li.querySelector(".dots")) return;
+
+    const score = Number(li.getAttribute("data-score") || 0);
+    const max = Number(li.getAttribute("data-max") || 5);
+
+    const dots = document.createElement("span");
+    dots.className = "dots";
+    dots.setAttribute("aria-label", `${li.getAttribute("data-skill") || "skill"}: ${score}/${max}`);
+
+    for (let i = 1; i <= max; i++) {
+      const dot = document.createElement("span");
+      dot.className = "dot" + (i <= score ? " filled" : "");
+      dots.appendChild(dot);
+    }
+
+    li.appendChild(dots);
+  });
 });
