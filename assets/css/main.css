@@ -394,35 +394,35 @@ body {
   }
 }
 
-/* ---------------- SKILLS (revised typography) ---------------- */
+/* ---------------- SKILLS (matched to bullets) ---------------- */
 
 .skills {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 12px;
+  gap: 10px;
   max-width: 520px;
 }
 
 .skill {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 140px 1fr;
   align-items: center;
   gap: 14px;
 
-  /* revised: slightly larger + bold, consistent with CV */
+  /* match bullets */
   font-size: 15px;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #222;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #444;
 }
 
 .skill::before {
   content: attr(data-skill);
-  text-transform: capitalize;
-  letter-spacing: 0.3px;
-  font-weight: 650;
+  text-transform: none;
+  letter-spacing: 0.1px;
+  font-weight: 600; /* slight emphasis only */
 }
 
 .dots {
@@ -432,16 +432,16 @@ body {
 }
 
 .dot {
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   border-radius: 999px;
-  border: 1.5px solid #222;
-  opacity: 0.3;
+  border: 1px solid #444;
+  opacity: 0.25;
 }
 
 .dot.filled {
-  opacity: 1;
-  background: #222;
+  opacity: 0.9;
+  background: #444;
 }
 
 /* ---------------- TWO COLUMN LAYOUT (bullets left, skills right) ---------------- */
@@ -457,12 +457,12 @@ body {
 .cv-mini-title {
   margin: 0 0 10px;
 
-  font-size: 14px;        /* just slightly above bullets */
-  font-weight: 600;       /* clear but not heavy */
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  color: #333;
+  /* quiet label, not a headline */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #444;
 }
 
 /* let the skills list fit nicely in the right column */
