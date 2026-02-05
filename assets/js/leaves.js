@@ -1,5 +1,4 @@
 (() => {
-  // trigger: the big photo on the left side
   const trigger =
     document.getElementById("photo-trigger") ||
     document.querySelector(".photo-flip") ||
@@ -8,7 +7,6 @@
   const overlay = document.getElementById("leaf-overlay");
   if (!trigger || !overlay) return;
 
-  // simple svg leaf as a data url (transparent background)
   const leafSvg = (fill) => {
     const svg =
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -21,7 +19,7 @@
   const palette = ["#c84c0c", "#d97706", "#b45309", "#9a3412", "#f59e0b"];
   let running = false;
 
-  function spawnLeaves(count = 22, runMs = 2400) {
+  function spawnLeaves(count = 24, runMs = 5600) {
     if (running) return;
     running = true;
 
@@ -33,17 +31,20 @@
     for (let i = 0; i < count; i++) {
       const leaf = document.createElement("img");
       leaf.className = "leaf";
+      leaf.src = leafSvg(palette[Math.floor(Math.random() * palette.length)]);
 
-      const color = palette[Math.floor(Math.random() * palette.length)];
-      leaf.src = leafSvg(color);
+      const x = Math.random() * 100;                 // vw
+      const size = 18 + Math.random() * 26;          // px
+      const dur = 6.5 + Math.random() * 3.5;         // 6.5–10s
+      const sway = 1.8 + Math.random() * 1.8;        // slow sway
+      const drift = Math.random() * 160 - 80;        // px
+      const rot = 360 + Math.random() * 720;         // deg
 
-      const x = Math.random() * 100;            // vw
-      const size = 18 + Math.random() * 26;     // px
-      const dur = 3.4 + Math.random() * 2.6;    // s
-      const sway = 1.0 + Math.random() * 1.2;   // s
-      const drift = (Math.random() * 140 - 70); // px
-      const rot = 360 + Math.random() * 720;    // deg
-      const delay = Math.random() * 0.25;       // s
+      // 👇 KEY FIX: instant start for first leaves
+      const delay =
+        i < 5
+          ? 0                                   // immediate feedback
+          : 0.15 + Math.random() * 1.2;         // gentle stagger
 
       leaf.style.setProperty("--x", `${x}vw`);
       leaf.style.setProperty("--size", `${size}px`);
@@ -59,7 +60,6 @@
 
     overlay.appendChild(frag);
 
-    // stop the effect and hide overlay after a short burst
     setTimeout(() => {
       overlay.innerHTML = "";
       overlay.style.display = "none";
@@ -68,5 +68,5 @@
   }
 
   trigger.style.cursor = "pointer";
-  trigger.addEventListener("click", () => spawnLeaves(24, 2600));
+  trigger.addEventListener("click", () => spawnLeaves());
 })();
