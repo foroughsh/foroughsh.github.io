@@ -16,6 +16,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 22px 40px;
+  flex-wrap: nowrap;
 }
 
 .brand {
@@ -59,7 +60,8 @@ body {
   align-items: center;
   gap: 12px;
   font-size: 16px;
-  margin-left: auto;
+
+  white-space: nowrap; 
 }
 
 .nav-link {
