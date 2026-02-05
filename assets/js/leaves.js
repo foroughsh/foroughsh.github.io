@@ -21,7 +21,8 @@
   const palette = ["#c84c0c", "#d97706", "#b45309", "#9a3412", "#f59e0b"];
   let running = false;
 
-  function spawnLeaves(count = 22, runMs = 2400) {
+  // 🔸 ONLY durations adjusted
+  function spawnLeaves(count = 24, runMs = 3600) {
     if (running) return;
     running = true;
 
@@ -39,11 +40,14 @@
 
       const x = Math.random() * 100;            // vw
       const size = 18 + Math.random() * 26;     // px
-      const dur = 3.4 + Math.random() * 2.6;    // s
-      const sway = 1.0 + Math.random() * 1.2;   // s
+
+      // 🔸 longer fall, same feeling
+      const dur = 4.6 + Math.random() * 3.2;    // ~4.6–7.8s
+
+      const sway = 1.0 + Math.random() * 1.2;   // unchanged
       const drift = (Math.random() * 140 - 70); // px
       const rot = 360 + Math.random() * 720;    // deg
-      const delay = Math.random() * 0.25;       // s
+      const delay = Math.random() * 0.25;       // unchanged
 
       leaf.style.setProperty("--x", `${x}vw`);
       leaf.style.setProperty("--size", `${size}px`);
@@ -59,7 +63,7 @@
 
     overlay.appendChild(frag);
 
-    // stop the effect and hide overlay after a short burst
+    // 🔸 keep overlay visible longer
     setTimeout(() => {
       overlay.innerHTML = "";
       overlay.style.display = "none";
@@ -68,5 +72,5 @@
   }
 
   trigger.style.cursor = "pointer";
-  trigger.addEventListener("click", () => spawnLeaves(24, 2600));
+  trigger.addEventListener("click", () => spawnLeaves());
 })();
