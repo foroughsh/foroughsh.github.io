@@ -492,3 +492,31 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+}
+
+/* force topbar layout on cv page */
+.cv-page .topbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+}
+
+.cv-page .nav {
+  margin-left: auto !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
+
+.cv-page .brand {
+  flex-shrink: 0 !important;
+}
+
+.topbar { outline: 4px solid red !important; }
+
