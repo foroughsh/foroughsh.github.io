@@ -13,7 +13,6 @@
   background: transparent;
 }
 
-/* brand text */
 .gallery-dark .gallery-brand {
   text-decoration: none;
   color: inherit;
@@ -29,7 +28,7 @@
 
 /* nav */
 .gallery-dark .gallery-nav .nav-link {
-  color: #f5f5f5;              /* menu text = your old background vibe */
+  color: #f5f5f5;
   text-decoration: none;
   opacity: 0.9;
 }
@@ -43,7 +42,6 @@
   color: rgba(245,245,245,0.35);
 }
 
-/* optional active style */
 .gallery-dark .gallery-nav .nav-link.is-active {
   opacity: 1;
   text-decoration: underline;
@@ -82,13 +80,13 @@
 
 /* cool rounded-rectangle frame */
 .art-card {
-  display: block;
   border-radius: 18px;
   padding: 10px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.10);
   box-shadow: 0 14px 30px rgba(0,0,0,0.28);
   transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+  cursor: pointer;
 }
 
 .art-card:hover {
@@ -105,9 +103,54 @@
   display: block;
 }
 
+/* keyboard focus */
+.art-card:focus {
+  outline: 2px solid rgba(245,245,245,0.35);
+  outline-offset: 3px;
+}
+
 /* footer */
 .gallery-footer {
   color: rgba(245,245,245,0.6);
+}
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+.art-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* close button */
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  font-size: 26px;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
 }
 
 /* responsive tweaks */
@@ -116,4 +159,12 @@
   .gallery-dark .gallery-topbar { padding: 18px 18px; }
   .gallery-h1 { font-size: 34px; }
   .art-card img { height: 220px; }
+}
+
+@media (max-width: 520px) {
+  .lightbox-close {
+    top: 16px;
+    right: 18px;
+    font-size: 24px;
+  }
 }
