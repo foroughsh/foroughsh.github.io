@@ -1,40 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Projects – Forough Shahabsamani</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>cv – forough shahabsamani</title>
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script defer src="/assets/js/main.js"></script>
 </head>
-<body>
 
-<nav>
-  <a href="/">home</a>
-  <a href="/about/">about</a>
-  <a href="/projects/">projects</a>
-  <a href="/publications/">publications</a>
-  <a href="/cv/">cv</a>
-  <a href="/contact/">contact</a>
-</nav>
+<body class="cv-page">
+  <!-- top bar -->
 
-<main>
-  <h1>projects</h1>
+  <header class="topbar">
+  <a href="/index.html" class="brand">
+    <img class="avatar" src="/assets/images/profile-alt-tp-sq.png" alt="forough profile icon" />
+    <div class="brand-text">
+      <div class="name">Forough Shahabsamani</div>
+      <div class="role">Data Scientist</div>
+    </div>
+  </a>
 
-  <ul>
-    <li>
-      <strong>recommendation system</strong><br>
-      contextual bandits for personalized product recommendations.
-    </li>
-    <li>
-      <strong>monitoring pipelines</strong><br>
-      data quality and inference monitoring for ml systems.
-    </li>
-  </ul>
-</main>
+  <nav class="nav">
+    <a href="/index.html" class="nav-link">home</a>
+    <span class="sep">|</span>
+    <a href="/CV/" class="nav-link">resume</a>
+    <span class="sep">|</span>
+    <a href="/projects/" class="nav-link">projects & publications</a>
+    <span class="sep">|</span>
+    <a href="/gallery/" class="nav-link">my art gallery</a>
+    <span class="sep">|</span>
+    <a href="/contact/" class="nav-link">contact</a>
+  </nav>
+</header>
 
-<footer>
-  <p>© forough shahabsamani</p>
-</footer>
 
+  <main class="hero">
+    <section class="hero-grid">
+      <div class="hero-text">
+
+        <h2 class="subhead cv-section-title">Publications</h2>
+
+        
+
+        <!-- education accordion (single-open, all collapsed by default) -->
+        <div class="cv-accordion" data-accordion="single" data-default-open="none">
+
+          <!-- education item 1 -->
+          <section class="cv-acc-item">
+            <button class="cv-acc-trigger" type="button" aria-expanded="false">
+              <div class="cv-left">
+                <!-- <img class="cv-logo" src="/assets/images/kth-logo.png" alt="kth logo" /> -->
+                <div class="cv-left-text">
+                  <div class="cv-org">Dynamically meeting performance objectives for multiple services on a service mesh</div>
+                  <div class="cv-dates">2022</div>
+                </div>
+              </div>
+
+              <!-- <div class="cv-acc-right">
+                <div class="cv-role">PhD, Computer Science</div>
+                <span class="cv-acc-chev">▾</span>
+              </div> -->
+            </button>
+
+            <div class="cv-acc-panel" role="region">
+              <p class="cv-desc">
+                During my PhD studies, my research focused on self-driving and autonomous networked systems, using machine learning and data-driven approaches to enable intelligent resource management. I worked on designing and evaluating learning-based methods that adapt system behavior under real-world constraints.
+              </p>
+              <p class="cv-desc">
+                A key part of my work involved bridging research and practice, with an emphasis on deployable solutions, reproducibility, and collaboration with industrial research environments. This experience strengthened my ability to translate theoretical ideas into robust, production-aware systems.
+              </p>
+              <ul class="cv-bullets">
+                <li>Machine learning and reinforcement learning for autonomous and self-driving systems</li>
+                <li>Applied research with real-world deployment considerations</li>
+                <li>Data analysis, modeling, and experimentation using Python and ML frameworks</li>
+                <li>Collaboration with industrial research partners and large-scale system environments</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> forough shahabsamani</div>
+  </footer>
 </body>
 </html>
