@@ -6,21 +6,23 @@
   <title>Forough Shahabsamani</title>
 
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/leaves.css" />
+
   <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/leaves.js"></script>
 </head>
 
-<div id="leaf-overlay" aria-hidden="true"></div>
-<script src="/assets/js/leaves.js"></script>
-<link rel="stylesheet" href="/assets/css/leaves.css">
-
 <body>
+  <!-- overlay for falling leaves -->
+  <div id="leaf-overlay" aria-hidden="true"></div>
+
   <!-- top bar -->
   <header class="topbar">
     <div class="brand">
       <!-- static small icon (no hover effect) -->
       <img
         class="avatar"
-        src="assets/images/profile-alt-tp-sq.png"
+        src="/assets/images/profile-alt-tp-sq.png"
         alt="forough profile icon"
       />
 
@@ -47,7 +49,8 @@
 
       <!-- left: FLIPPING profile photo -->
       <div class="photo-wrap">
-        <div class="photo-flip">
+        <!-- id used by leaves.js so click is reliable -->
+        <div class="photo-flip" id="photo-trigger" aria-label="click for leaves effect">
           <div class="photo-inner">
             <img
               class="photo-face photo-front"
@@ -56,7 +59,7 @@
             />
             <img
               class="photo-face photo-back"
-              src="/assets/images/smallicon.png" 
+              src="/assets/images/smallicon.png"
               alt="alternate photo of forough"
             />
           </div>
