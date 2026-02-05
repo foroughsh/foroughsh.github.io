@@ -6,16 +6,15 @@
   <title>art gallery – forough shahabsamani</title>
 
   <link rel="stylesheet" href="/assets/css/main.css" />
-  <link rel="stylesheet" href="/assets/css/gallery.css" />
+  <link rel="stylesheet" href="/assets/css/gallery-dark.css" />
 
   <script defer src="/assets/js/main.js"></script>
-  <script defer src="/assets/js/gallery.js"></script>
 </head>
 
-<body class="gallery-page">
+<body class="gallery-page gallery-dark">
   <!-- top bar -->
-  <header class="topbar">
-    <a href="/index.html" class="brand">
+  <header class="topbar gallery-topbar">
+    <a href="/index.html" class="brand gallery-brand">
       <img class="avatar" src="/assets/images/profile-alt-tp-sq.png" alt="forough profile icon" />
       <div class="brand-text">
         <div class="name">Forough Shahabsamani</div>
@@ -23,70 +22,49 @@
       </div>
     </a>
 
-    <nav class="nav">
+    <nav class="nav gallery-nav">
       <a href="/index.html" class="nav-link">home</a>
       <span class="sep">|</span>
       <a href="/CV/" class="nav-link">resume</a>
       <span class="sep">|</span>
       <a href="/projects/" class="nav-link">projects & publications</a>
       <span class="sep">|</span>
-      <a href="/gallery/" class="nav-link">my art gallery</a>
+      <a href="/gallery/" class="nav-link is-active">my art gallery</a>
       <span class="sep">|</span>
       <a href="/contact/" class="nav-link">contact</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <section class="hero-grid">
-      <div class="hero-text">
+  <main class="gallery-wrap">
+    <div class="gallery-head">
+      <h1 class="gallery-h1">my art gallery</h1>
+      <p class="gallery-sub">
+        a selection of pastel and watercolor works.
+      </p>
+    </div>
 
-        <h2 class="subhead">art gallery</h2>
+    <section class="gallery-grid" aria-label="artworks">
+      <!-- replace src with your real images -->
+      <a class="art-card" href="/assets/art/pastel-01.jpg">
+        <img src="/assets/art/pastel-01.jpg" alt="artwork 1" loading="lazy" />
+      </a>
 
-        <p class="bio">
-          A personal collection of drawings and paintings, mostly in pastel and watercolor.
-          This is a quiet space, separate from my technical work.
-        </p>
+      <a class="art-card" href="/assets/art/pastel-02.jpg">
+        <img src="/assets/art/pastel-02.jpg" alt="artwork 2" loading="lazy" />
+      </a>
 
-        <!-- section -->
-        <section class="gallery-section">
-          <h3 class="gallery-title">pastel</h3>
+      <a class="art-card" href="/assets/art/watercolor-01.jpg">
+        <img src="/assets/art/watercolor-01.jpg" alt="artwork 3" loading="lazy" />
+      </a>
 
-          <div class="gallery-grid">
-            <figure class="art-item">
-              <img src="/assets/art/pastel-01.jpg" alt="pastel artwork" />
-              <figcaption>pastel on paper · 2021</figcaption>
-            </figure>
-
-            <figure class="art-item">
-              <img src="/assets/art/pastel-02.jpg" alt="pastel artwork" />
-              <figcaption>pastel on paper · 2022</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <!-- section -->
-        <section class="gallery-section">
-          <h3 class="gallery-title">watercolor</h3>
-
-          <div class="gallery-grid">
-            <figure class="art-item">
-              <img src="/assets/art/watercolor-01.jpg" alt="watercolor artwork" />
-              <figcaption>watercolor · 2020</figcaption>
-            </figure>
-          </div>
-        </section>
-
-      </div>
+      <a class="art-card" href="/assets/art/watercolor-02.jpg">
+        <img src="/assets/art/watercolor-02.jpg" alt="artwork 4" loading="lazy" />
+      </a>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer gallery-footer">
     <div>© <span id="year"></span> forough shahabsamani</div>
   </footer>
-
-  <!-- lightbox -->
-  <div class="lightbox" hidden>
-    <img alt="" />
-  </div>
 </body>
 </html>
