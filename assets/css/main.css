@@ -499,3 +499,162 @@ body {
   }
 }
 
+/* =========================
+   PROJECTS & PUBLICATIONS PAGE (no CV collisions)
+   ========================= */
+
+.projects-page .hero-grid {
+  grid-template-columns: 1fr;  /* full width */
+  gap: 0;
+  align-items: start;
+}
+
+.projects-page .hero-text {
+  max-width: 100%;
+}
+
+/* publications accordion (separate from CV accordion) */
+.pub-accordion {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.pub-item {
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.pub-trigger {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* allows long titles to wrap nicely */
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.pub-trigger:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.pub-trigger:focus {
+  outline: 2px solid rgba(0,0,0,0.18);
+  outline-offset: -2px;
+}
+
+.pub-left {
+  min-width: 0; /* key: allows flex child to shrink & wrap text */
+  flex: 1;
+}
+
+.pub-title {
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+  white-space: normal;     /* wrap */
+  word-break: normal;      /* keep words */
+  overflow-wrap: anywhere; /* prevents overflow on very long strings */
+}
+
+.pub-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.pub-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pub-year {
+  font-weight: 750;
+  color: #111;
+  white-space: nowrap;
+}
+
+.pub-chev {
+  display: inline-block;
+  transition: transform 180ms ease;
+  opacity: 0.75;
+}
+
+/* panel open/close */
+.pub-panel {
+  padding: 0 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease, opacity 180ms ease, padding 220ms ease;
+}
+
+.pub-item.is-open .pub-panel {
+  padding: 0 16px 16px;
+  max-height: 900px;
+  opacity: 1;
+}
+
+.pub-item.is-open .pub-chev {
+  transform: rotate(180deg);
+}
+
+/* publications content */
+.pub-desc {
+  margin: 10px 0 12px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.pub-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.pub-bullets li {
+  margin: 6px 0;
+}
+
+/* optional links row (if you add later) */
+.pub-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  text-decoration: none;
+  color: #111;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.pub-link:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+/* responsive */
+@media (max-width: 520px) {
+  .pub-trigger {
+    gap: 12px;
+  }
+}
