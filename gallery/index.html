@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>my art gallery – forough shahabsamani</title>
+  <title>art gallery – forough shahabsamani</title>
 
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="/assets/css/gallery-dark.css" />
@@ -39,27 +39,25 @@
   <main class="gallery-wrap">
     <div class="gallery-head">
       <h1 class="gallery-h1">my art gallery</h1>
-      <p class="gallery-sub">
-        a selection of drawings and paintings. click any piece to view it larger.
-      </p>
+      <p class="gallery-sub">a selection of pastel and watercolor works.</p>
     </div>
 
     <section class="gallery-grid" aria-label="artworks">
-      <!-- replace these with your real images -->
-      <div class="art-card" data-full="/assets/art/pastel-01.jpg" role="button" tabindex="0" aria-label="open artwork 1">
-        <img src="/assets/art/pastel-01.jpg" alt="artwork 1" loading="lazy" />
+      <!-- IMPORTANT: use div + data-full, not <a href> -->
+      <div class="art-card" data-full="/assets/art/kimsmom.jpg" role="button" tabindex="0" aria-label="open artwork 1">
+        <img src="/assets/art/kimsmom.jpg" alt="artwork 1" loading="lazy" />
       </div>
 
-      <div class="art-card" data-full="/assets/art/pastel-02.jpg" role="button" tabindex="0" aria-label="open artwork 2">
-        <img src="/assets/art/pastel-02.jpg" alt="artwork 2" loading="lazy" />
+      <div class="art-card" data-full="/assets/art/north.jpg" role="button" tabindex="0" aria-label="open artwork 2">
+        <img src="/assets/art/north.jpg" alt="artwork 2" loading="lazy" />
       </div>
 
-      <div class="art-card" data-full="/assets/art/watercolor-01.jpg" role="button" tabindex="0" aria-label="open artwork 3">
-        <img src="/assets/art/watercolor-01.jpg" alt="artwork 3" loading="lazy" />
+      <div class="art-card" data-full="/assets/art/boat.jpeg" role="button" tabindex="0" aria-label="open artwork 3">
+        <img src="/assets/art/boat.jpeg" alt="artwork 3" loading="lazy" />
       </div>
 
-      <div class="art-card" data-full="/assets/art/watercolor-02.jpg" role="button" tabindex="0" aria-label="open artwork 4">
-        <img src="/assets/art/watercolor-02.jpg" alt="artwork 4" loading="lazy" />
+      <div class="art-card" data-full="/assets/art/sunset.jpeg" role="button" tabindex="0" aria-label="open artwork 4">
+        <img src="/assets/art/sunset.jpeg" alt="artwork 4" loading="lazy" />
       </div>
     </section>
   </main>
@@ -68,10 +66,10 @@
     <div>© <span id="year"></span> forough shahabsamani</div>
   </footer>
 
-  <!-- lightbox overlay -->
+  <!-- LIGHTBOX (this was missing) -->
   <div class="art-lightbox" hidden aria-hidden="true">
     <button class="lightbox-close" aria-label="close image">✕</button>
-    <img class="lightbox-img" alt="expanded artwork" />
+    <img class="lightbox-img" alt="" />
   </div>
 </body>
 </html>

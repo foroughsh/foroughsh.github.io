@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!lightbox || !lightboxImg || !closeBtn) return;
 
-  function openLightbox(src, altText = "expanded artwork") {
+  function openLightbox(src, altText = "") {
     lightboxImg.src = src;
     lightboxImg.alt = altText;
     lightbox.hidden = false;
@@ -19,38 +19,34 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.hidden = true;
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImg.src = "";
+    lightboxImg.alt = "";
     document.body.style.overflow = "";
   }
 
-  // open on click
   cards.forEach((card) => {
     const img = card.querySelector("img");
     const full = card.getAttribute("data-full") || img?.src;
 
     card.addEventListener("click", () => {
       if (!full) return;
-      openLightbox(full, img?.alt || "expanded artwork");
+      openLightbox(full, img?.alt || "");
     });
 
-    // open with keyboard (Enter/Space)
     card.addEventListener("keydown", (e) => {
       if (!full) return;
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        openLightbox(full, img?.alt || "expanded artwork");
+        openLightbox(full, img?.alt || "");
       }
     });
   });
 
-  // close button
   closeBtn.addEventListener("click", closeLightbox);
 
-  // click outside image closes
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // ESC closes
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
   });

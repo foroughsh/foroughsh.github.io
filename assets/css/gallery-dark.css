@@ -13,6 +13,7 @@
   background: transparent;
 }
 
+/* brand */
 .gallery-dark .gallery-brand {
   text-decoration: none;
   color: inherit;
@@ -126,6 +127,11 @@
   align-items: center;
   justify-content: center;
   z-index: 10000;
+}
+
+/* IMPORTANT: make the HTML hidden attribute work */
+.art-lightbox[hidden] {
+  display: none !important;
 }
 
 .lightbox-img {
