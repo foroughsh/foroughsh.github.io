@@ -1,5 +1,5 @@
 (() => {
-  // trigger: the big photo on the left side
+  // trigger: big photo on the left
   const trigger =
     document.getElementById("photo-trigger") ||
     document.querySelector(".photo-flip") ||
@@ -21,7 +21,8 @@
   const palette = ["#c84c0c", "#d97706", "#b45309", "#9a3412", "#f59e0b"];
   let running = false;
 
-  function spawnLeaves(count = 22, runMs = 2400) {
+  // longer run time + longer fall, but keeps the original "instant burst" feel
+  function spawnLeaves(count = 26, runMs = 5200) {
     if (running) return;
     running = true;
 
@@ -39,11 +40,16 @@
 
       const x = Math.random() * 100;            // vw
       const size = 18 + Math.random() * 26;     // px
-      const dur = 3.4 + Math.random() * 2.6;    // s
-      const sway = 1.0 + Math.random() * 1.2;   // s
+
+      // longer fall (keeps the same style as the first version)
+      const dur = 5.6 + Math.random() * 3.4;    // ~5.6–9.0s
+
+      const sway = 1.2 + Math.random() * 1.4;   // similar feel
       const drift = (Math.random() * 140 - 70); // px
       const rot = 360 + Math.random() * 720;    // deg
-      const delay = Math.random() * 0.25;       // s
+
+      // IMPORTANT: tiny delay only (keeps "immediate" start)
+      const delay = Math.random() * 0.25;       // up to 0.25s
 
       leaf.style.setProperty("--x", `${x}vw`);
       leaf.style.setProperty("--size", `${size}px`);
@@ -59,7 +65,6 @@
 
     overlay.appendChild(frag);
 
-    // stop the effect and hide overlay after a short burst
     setTimeout(() => {
       overlay.innerHTML = "";
       overlay.style.display = "none";
@@ -68,5 +73,5 @@
   }
 
   trigger.style.cursor = "pointer";
-  trigger.addEventListener("click", () => spawnLeaves(24, 2600));
+  trigger.addEventListener("click", () => spawnLeaves(28, 5200));
 })();
