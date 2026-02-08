@@ -1,0 +1,47 @@
+/* ---------------- CONTACT PAGE (scoped) ---------------- */
+
+.contact-page .hero-grid {
+  grid-template-columns: 1fr;   /* full width like CV/projects */
+  gap: 0;
+  align-items: start;
+}
+
+.contact-page .hero-text {
+  max-width: 820px;
+}
+
+.contact-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.contact-card {
+  display: block;
+  padding: 18px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.01);
+}
+
+.contact-title {
+  font-weight: 750;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.contact-sub {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
