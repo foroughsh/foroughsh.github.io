@@ -7,11 +7,16 @@
 
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="/assets/css/contact.css" />
+  <link rel="stylesheet" href="/assets/css/leaves.css" />
 
   <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/leaves.js"></script>
 </head>
 
-<body class="contact-page">
+<body class="contact-page" data-leaves="auto">
+  <!-- falling leaves overlay -->
+  <div id="leaf-overlay" aria-hidden="true"></div>
+
   <!-- top bar -->
   <header class="topbar">
     <a href="/index.html" class="brand">
@@ -37,8 +42,9 @@
 
   <main class="hero">
     <section class="hero-grid">
-      <div class="hero-text">
 
+      <!-- left: text -->
+      <div class="hero-text">
         <h2 class="subhead">contact</h2>
 
         <p class="bio">
@@ -55,7 +61,6 @@
                  src="/assets/icons/linkedin.svg"
                  alt=""
                  aria-hidden="true" />
-
             <div class="contact-text">
               <div class="contact-title">linkedin</div>
               <div class="contact-sub">connect or message me</div>
@@ -71,7 +76,6 @@
                  src="/assets/icons/google-scholar.svg"
                  alt=""
                  aria-hidden="true" />
-
             <div class="contact-text">
               <div class="contact-title">google scholar</div>
               <div class="contact-sub">publications & citations</div>
@@ -84,15 +88,23 @@
                  src="/assets/icons/email.svg"
                  alt=""
                  aria-hidden="true" />
-
             <div class="contact-text">
               <div class="contact-title">email</div>
               <div class="contact-sub">fo.shahab@gmail.com</div>
             </div>
           </a>
         </div>
-
       </div>
+
+      <!-- right: illustration -->
+      <div class="contact-figure">
+        <img
+          src="/assets/images/contact.png"
+          alt="illustration of a woman writing a letter at a desk with autumn trees outside the window"
+          loading="lazy"
+        />
+      </div>
+
     </section>
   </main>
 

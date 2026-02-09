@@ -1,9 +1,9 @@
 /* ---------------- CONTACT PAGE (scoped) ---------------- */
 
 .contact-page .hero-grid {
-  grid-template-columns: 1fr;   /* full width like CV/projects */
-  gap: 0;
-  align-items: start;
+  grid-template-columns: 1.1fr 0.9fr; /* text left, image right */
+  gap: 40px;
+  align-items: center;
 }
 
 .contact-page .hero-text {
@@ -17,7 +17,7 @@
   gap: 16px;
 }
 
-/* card now supports icon + text */
+/* card supports icon + text */
 .contact-card {
   display: flex;
   align-items: center;
@@ -46,7 +46,6 @@
   object-fit: contain;
   flex-shrink: 0;
 
-  /* optional polish */
   opacity: 0.9;
   filter: grayscale(100%);
   transition: transform 140ms ease, filter 140ms ease, opacity 140ms ease;
@@ -75,4 +74,36 @@
   color: #666;
   line-height: 1.6;
   font-size: 14px;
+}
+
+/* ---------------- CONTACT ILLUSTRATION (right column) ---------------- */
+
+.contact-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-figure img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* responsive: stack image under text */
+@media (max-width: 900px) {
+  .contact-page .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .contact-figure {
+    order: 2; /* image below text */
+  }
+
+  .contact-figure img {
+    max-width: 360px;
+  }
 }

@@ -1,12 +1,12 @@
 (() => {
-  // trigger: the big photo on the left side
+  // trigger: big photo on homepage (might not exist on other pages)
   const trigger =
     document.getElementById("photo-trigger") ||
     document.querySelector(".photo-flip") ||
     document.querySelector(".photo-front");
 
   const overlay = document.getElementById("leaf-overlay");
-  if (!trigger || !overlay) return;
+  if (!overlay) return; // overlay must exist
 
   // simple svg leaf as a data url (transparent background)
   const leafSvg = (fill) => {
@@ -21,7 +21,6 @@
   const palette = ["#c84c0c", "#d97706", "#b45309", "#9a3412", "#f59e0b"];
   let running = false;
 
-  // 🔸 ONLY durations adjusted
   function spawnLeaves(count = 24, runMs = 3600) {
     if (running) return;
     running = true;
@@ -40,14 +39,11 @@
 
       const x = Math.random() * 100;            // vw
       const size = 18 + Math.random() * 26;     // px
-
-      // 🔸 longer fall, same feeling
       const dur = 4.6 + Math.random() * 3.2;    // ~4.6–7.8s
-
-      const sway = 1.0 + Math.random() * 1.2;   // unchanged
+      const sway = 1.0 + Math.random() * 1.2;   // s
       const drift = (Math.random() * 140 - 70); // px
       const rot = 360 + Math.random() * 720;    // deg
-      const delay = Math.random() * 0.25;       // unchanged
+      const delay = Math.random() * 0.25;       // s
 
       leaf.style.setProperty("--x", `${x}vw`);
       leaf.style.setProperty("--size", `${size}px`);
@@ -63,7 +59,6 @@
 
     overlay.appendChild(frag);
 
-    // 🔸 keep overlay visible longer
     setTimeout(() => {
       overlay.innerHTML = "";
       overlay.style.display = "none";
@@ -71,6 +66,18 @@
     }, runMs);
   }
 
-  trigger.style.cursor = "pointer";
-  trigger.addEventListener("click", () => spawnLeaves());
+  // keep click behavior on homepage (only if trigger exists)
+  if (trigger) {
+    trigger.style.cursor = "pointer";
+    trigger.addEventListener("click", () => spawnLeaves(24, 3600));
+  }
+
+  // OPTIONAL: run once on page load only when body has data-leaves="auto"
+  window.addEventListener("load", () => {
+    const auto = document.body?.dataset?.leaves === "auto";
+    if (!auto) return;
+
+    // small delay so it starts immediately after render
+    setTimeout(() => spawnLeaves(14, 2800), 120);
+  });
 })();
