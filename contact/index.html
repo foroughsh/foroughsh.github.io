@@ -40,27 +40,29 @@
     </nav>
   </header>
 
-  <main class="hero">
-    <section class="hero-grid">
+  <main class="hero contact-hero">
+    <section class="hero-grid contact-layout">
 
-      <!-- left: text -->
-      <div class="hero-text">
+      <!-- left: text + cards -->
+      <div class="hero-text contact-left">
         <h2 class="subhead">contact</h2>
 
         <p class="bio">
           The best way to reach me is through the platforms below.
         </p>
 
-        <div class="contact-grid">
+        <!-- CHOOSE ONE:
+             - 2x2 grid: class="contact-grid grid-2x2"
+             - 4x1 row : class="contact-grid grid-4x1"
+        -->
+        <div class="contact-grid grid-2x2">
+
           <!-- LinkedIn -->
           <a class="contact-card"
              href="https://www.linkedin.com/in/forough-shahab-samani-a8057364/"
              target="_blank"
              rel="noopener">
-            <img class="contact-icon"
-                 src="/assets/icons/linkedin.svg"
-                 alt=""
-                 aria-hidden="true" />
+            <img class="contact-icon" src="/assets/icons/linkedin.svg" alt="" aria-hidden="true" />
             <div class="contact-text">
               <div class="contact-title">linkedin</div>
               <div class="contact-sub">connect or message me</div>
@@ -72,22 +74,28 @@
              href="https://scholar.google.com/citations?user=EJX-ObgAAAAJ&hl=en"
              target="_blank"
              rel="noopener">
-            <img class="contact-icon"
-                 src="/assets/icons/google-scholar.svg"
-                 alt=""
-                 aria-hidden="true" />
+            <img class="contact-icon" src="/assets/icons/google-scholar.svg" alt="" aria-hidden="true" />
             <div class="contact-text">
               <div class="contact-title">google scholar</div>
               <div class="contact-sub">publications & citations</div>
             </div>
           </a>
 
+          <!-- GitHub -->
+          <a class="contact-card"
+             href="https://github.com/foroughshahab"
+             target="_blank"
+             rel="noopener">
+            <img class="contact-icon" src="/assets/icons/github.svg" alt="" aria-hidden="true" />
+            <div class="contact-text">
+              <div class="contact-title">github</div>
+              <div class="contact-sub">code & projects</div>
+            </div>
+          </a>
+
           <!-- Email -->
           <a class="contact-card" href="mailto:fo.shahab@gmail.com">
-            <img class="contact-icon"
-                 src="/assets/icons/email.svg"
-                 alt=""
-                 aria-hidden="true" />
+            <img class="contact-icon" src="/assets/icons/email.svg" alt="" aria-hidden="true" />
             <div class="contact-text">
               <div class="contact-title">email</div>
               <div class="contact-sub">fo.shahab@gmail.com</div>
