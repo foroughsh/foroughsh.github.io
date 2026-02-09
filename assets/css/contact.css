@@ -1,16 +1,21 @@
 /* ---------------- CONTACT PAGE (scoped) ---------------- */
 
+/* move the whole contact content higher (only on this page) */
+.contact-page .hero {
+  padding-top: 24px; /* tune: 32px subtle, 16px stronger */
+}
+
 /* overall two-column layout */
 .contact-page .contact-layout {
   grid-template-columns: 1.1fr 0.9fr; /* text left, image right */
   gap: 40px;
-  align-items: start;     /* not centered */
-  min-height: 75vh;       /* gives a vertical reference */
+  align-items: start;   /* not centered */
+  min-height: 75vh;     /* gives a vertical reference */
 }
 
-/* place left content around top ~25% */
+/* place left content around top ~25% (slightly higher now) */
 .contact-page .contact-left {
-  padding-top: 12vh;      /* tune: 10vh higher, 14vh lower */
+  padding-top: 9vh;     /* was 12vh */
   max-width: 820px;
 }
 
@@ -38,7 +43,7 @@
   align-items: center;
   gap: 14px;
 
-  padding: 16px 16px;
+  padding: 16px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.12);
   text-decoration: none;
@@ -97,7 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 6vh; /* small alignment tweak */
+  padding-top: 4vh; /* small lift (was 6vh) */
 }
 
 .contact-figure img {
@@ -124,7 +129,7 @@
   }
 
   .contact-page .contact-left {
-    padding-top: 0; /* remove 25% offset on mobile */
+    padding-top: 0; /* remove offset on mobile */
     max-width: 100%;
   }
 
@@ -137,7 +142,7 @@
     max-width: 360px;
   }
 
-  /* 2x2 becomes 1 column on small screens */
+  /* 2x2 and 4x1 both become 1 column on small screens */
   .contact-grid.grid-2x2,
   .contact-grid.grid-4x1 {
     grid-template-columns: 1fr;
