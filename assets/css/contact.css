@@ -17,14 +17,19 @@
   gap: 16px;
 }
 
+/* card now supports icon + text */
 .contact-card {
-  display: block;
-  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 18px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.12);
   text-decoration: none;
   color: #111;
   background: #fff;
+
   transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
 }
 
@@ -34,10 +39,36 @@
   background: rgba(0,0,0,0.01);
 }
 
+/* logo/icon */
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+
+  /* optional polish */
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: transform 140ms ease, filter 140ms ease, opacity 140ms ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.05);
+  filter: none;
+  opacity: 1;
+}
+
+/* text block */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* prevents overflow on long text */
+}
+
 .contact-title {
   font-weight: 750;
   font-size: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .contact-sub {
