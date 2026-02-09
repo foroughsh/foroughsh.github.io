@@ -11,7 +11,7 @@
 }
 
 .contact-grid {
-  margin-top: 18px;
+  margin-top: 6px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
